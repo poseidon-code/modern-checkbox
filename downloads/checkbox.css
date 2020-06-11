@@ -1,0 +1,60 @@
+/* enter --checkbox-height to change checkbox size */
+
+:root {
+    --checkbox-height: 300px;    /*<==change this==*/
+    --checkbox-width: calc(var(--checkbox-height) * 2);
+    --slider-padding: calc(var(--checkbox-height) / 10);
+    --slider-size: calc(var(--checkbox-height) - calc(var(--slider-padding) * 2));
+    --bg-unchecked: #ccc;   /*change color when unchecked*/
+    --bg-checked: #2196f3;  /*change color when checked*/
+    --bg-slider: #fff;      /*change slider color*/
+}
+
+
+.checkbox {
+    position: relative;
+    display: inline-block;
+    width: var(--checkbox-width);
+    height: var(--checkbox-height);
+}
+.checkbox input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    border-radius: var(--checkbox-height);
+    background-color: var(--bg-unchecked);
+    transition: .2s;
+}
+.slider::after {
+    position: absolute;
+    content: "";
+    height: var(--slider-size);
+    width: var(--slider-size);
+    border-radius: 50%;
+    
+    left: var(--slider-padding);
+    bottom: var(--slider-padding);
+    
+    background-color: var(--bg-slider);
+    box-shadow: 0 0 10px 1px rgba(0,0,0, 0.3);
+    transition: .2s;
+}
+
+
+input:checked + .slider {
+    background-color: var(--bg-checked);
+}
+input:checked + .slider::after {
+    transform: translateX(var(--checkbox-height));
+}

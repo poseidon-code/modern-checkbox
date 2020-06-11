@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/modernpage.css">
+    <link rel="stylesheet" href="./css/checkbox.css">
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+    <title>Modern Checkbox</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Modern Checkbox</div>
+        
+        <div class="content">
+            <div class="preview">
+                <div class="product">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>               
+                <div class="download">
+                    <h1><img class="icons"src="./img/download.svg"> Download</h1>
+                    <br>
+                    <p><b>To Download :</b> Right Click on the buttons below & select 'Save Link as' then 'Save' it to your project folder...</p>
+                    <br><br>
+                    <ul>
+                        <li class="css-f"><a href="./downloads/checkbox.css">checkbox<span class="css">.css</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <br><br><hr><br><br>
+            
+            <div class="howto">
+                <h1><img class="icons" src="./img/code.svg"> Implementing Modern Checkbox </h1>
+                <div class="process">
+                    <div class="vr"></div>
+                    <ol>
+                        <li>Download the <b>checkbox.css</b> file from above and save it to your project folder</li>
+                        <li>Add the checkbox.css file path <i>(if the html and checkbox.css have same path, one can copy this exact code)</i> :
+<pre class="code">
+&lt;head&gt;
+    &lt;link rel="stylesheet" type="text/css" href="checkbox.css"&gt;
+&lt;/head&gt;</pre>
+                        </li>
+                        <li>Add this where ever you want to put the checkbox :
+<pre class="code">
+&lt;label class="checkbox"&gt;
+    &lt;input type="checkbox"&gt;
+    &lt;span class="slider"&gt;&lt;/span&gt;
+&lt;/label&gt;</pre>
+                        </li>
+                        <li>At the end, your code should look like this :
+<pre class="code">
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;link rel="stylesheet" type="text/css" href="checkbox.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        . . . 
+        &lt;label class="checkbox"&gt;
+            &lt;input type="checkbox"&gt;
+            &lt;span class="slider"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        . . . 
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+                        </li>
+                    </ol>
+                </div>
+                <br><br>
+
+                <h1><img class="icons" src="./img/code.svg"> Changing Checkbox Properties </h1>
+                <div class="process">
+                    <div class="vr"></div>
+                    <ol>
+                        <li>Open checkbox.css</li>
+                        <li>Under <b>:root</b>, you can change the :<br>
+                            <b>--checkbox-height</b> : <i>must, as this calculates & sets all the sizing of the checkbox</i><br>
+                            <b>--bg-unchecked</b> : <i>sets the checkbox's color when unchecked</i><br>
+                            <b>--bg-checked</b> : <i>sets the checkbox's color when checked</i><br>
+                            <b>--bg-slider</b> : <i>sets the rounded slider's color</i><br>
+                            by default :
+<pre class="code">
+:root {
+    --checkbox-height: 600px;
+    --bg-unchecked: #ccc;
+    --bg-checked: #2196f3;
+    --bg-slider: #fff;
+}</pre>
+                        </li>
+                    </ol>
+                </div>
+                <br><br>
+                
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>
+                Modern Checkbox <br>
+                &copy;poseidon-code <br>
+                <a href="http://facebook.com/pritamhalder0506"><img class="icons" src="./img/facebook.svg"></a> 
+                <a href="http://gtihub.com/poseidon-code"><img class="icons" src="./img/github.svg"></a>
+                <a href="http://instagram.com/pritam.poseidon"><img class="icons" src="./img/instagram.svg"></a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
